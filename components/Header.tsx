@@ -5,13 +5,21 @@ function Header() {
     <header className="px-8 py-5 w-full">
       <div
         data-aos="fade-left"
-        className="flex justify-between items-center space-x-5 cursor-pointer"
+        className="flex justify-between items-center space-x-5 "
       >
-        <Link href="/" target="_blank">
-          NiagaPay
-        </Link>
+        <Link href="/">NiagaPay</Link>
 
-        <button>Contact Us</button>
+        <div className="flex flex-row items-center space-x-3">
+          <button className="p-4 bg-black text-white rounded-md">
+            Contact Us
+          </button>
+          <Link
+            href="https://portal.niagapay.click/login"
+            className="p-4 bg-black text-white rounded-md"
+          >
+            Login
+          </Link>
+        </div>
       </div>
     </header>
   );
