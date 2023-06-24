@@ -2,7 +2,10 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import Aos from 'aos';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import Banner from '../../components/Banner';
+import Devs from '../../components/Devs';
+import Pricing from '../../components/Pricing';
 
 const Header = dynamic(() => import('../../components/Header'));
 const Built = dynamic(() => import('../../components/Built'));
@@ -20,7 +23,7 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <div className="w-full min-h-screen font-sans text-gray-900 bg-gradient-to-br from-transparent to-green-100">
       <Head>
         <title>NiagaPay - Solution For Payments</title>
         <meta
@@ -31,14 +34,13 @@ export default function Home() {
         <link rel="icon" href="https://niagapay.click/images/favicon.ico" />
       </Head>
 
-      <div className="max-w-7xl mx-auto overflow-hidden">
-        <Header />
-        <main className="max-w-7xl mx-auto px-8">
-          <Built />
-          <Suits />
-        </main>
-        <Footer />
-      </div>
-    </>
+      <Header />
+      <Banner />
+      <Devs />
+      <Built />
+      <Pricing />
+      <Suits />
+      <Footer />
+    </div>
   );
 }

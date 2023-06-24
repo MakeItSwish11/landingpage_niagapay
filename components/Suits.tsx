@@ -61,19 +61,19 @@ function Suits() {
     },
   ];
   return (
-    <div className="py-8">
+    <section className="py-12 px-6 mx-auto max-w-screen-xl sm:px-8 md:px-12 lg:px-16 xl:px-24">
       <div data-aos="fade-up" data-aos-offset="350">
-        <h1 className=" text-center font-custom2 text-5xl mb-8">
+        <h2 className="max-w-lg mx-auto text-4xl font-bold tracking-tight text-center text-black sm:text-5xl md:text-6xl leading-tighter font-rubik">
           Our Service is suitable for
-        </h1>
+        </h2>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-4">
         {suits.map(({ id, img, desc, delay }) => (
           <div
             key={id}
-            className="flex flex-col bg-gray-100 justify-center items-center mt-2 m-2 mb-5 pt-12 pb-8 rounded-xl cursor-pointer
-                hover:bg-gray-100 hover:scale-105 transition transform duration-200 ease-out"
+            className="flex flex-col justify-center items-center mt-2 m-2 mb-5 pt-12 pb-8 rounded-xl cursor-pointer
+                 transition transform duration-200 ease-out"
             data-aos="zoom-out"
             data-aos-offset="100"
             data-aos-delay={delay}
@@ -97,7 +97,7 @@ function Suits() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
