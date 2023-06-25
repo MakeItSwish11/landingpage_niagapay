@@ -32,7 +32,7 @@ function Header() {
                 activeMenu === menu ? 'text-green' : ''
               }`}
             >
-              <a href="#">{menu}</a>
+              <a href={`#${menu}`}>{menu}</a>
               <div className="h-0.5 bg-green scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out" />
             </li>
           ))}

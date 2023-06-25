@@ -61,11 +61,7 @@ const Devs: FC<DevsProps> = ({}) => {
                   {'\n'}
                   &nbsp;&nbsp;{'"exp": "2023-06-09T08:01:55.272Z",'}
                   {'\n'}
-                  &nbsp;&nbsp;{'"transactionType": "transaction",'}
-                  {'\n'}
                   &nbsp;&nbsp;{'"status": "settled",'}
-                  {'\n'}
-                  &nbsp;&nbsp;{'"accessFrom": "api",'}
                   {'\n'}
                   {'}'}
                 </code>
@@ -77,7 +73,7 @@ const Devs: FC<DevsProps> = ({}) => {
 
       <div className="flex flex-col items-center pt-12 sm:items-start sm:flex-row md:pt-18">
         <div className="flex flex-col items-center w-full max-w-sm pt-8 text-center sm:text-left sm:block sm:pt-0 md:w-1/3">
-          <img src="img/api.svg" alt="" />
+          <img src="assets/api.svg" alt="" />
           <h3 className="pt-3 text-xl font-bold text-black sm:pt-6 font-rubik">
             Modern, clean APIs
           </h3>
@@ -88,7 +84,7 @@ const Devs: FC<DevsProps> = ({}) => {
           </p>
         </div>
         <div className="flex flex-col items-center w-full max-w-sm pt-8 text-center sm:text-left sm:block sm:pt-0 md:w-1/3">
-          <img src="img/cloud.svg" alt="" />
+          <img src="assets/cloud.svg" alt="" />
           <h3 className="pt-3 text-xl font-bold text-black sm:pt-6 font-rubik">
             Secure Payment Gateway
           </h3>
@@ -99,7 +95,7 @@ const Devs: FC<DevsProps> = ({}) => {
           </p>
         </div>
         <div className="flex flex-col items-center w-full max-w-sm pt-8 text-center sm:text-left sm:block sm:pt-0 md:w-1/3">
-          <img src="img/database.svg" alt="" />
+          <img src="assets/database.svg" alt="" />
           <h3 className="pt-3 text-xl font-bold text-black sm:pt-6 font-rubik">
             Sandbox environment
           </h3>

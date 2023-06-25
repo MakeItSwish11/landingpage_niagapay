@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import pg from '../public/assets/PG.png';
 import Image from 'next/image';
-import { StarIcon } from 'lucide-react';
+import Star from '../public/assets/star.svg';
 
 interface BannerProps {}
 
@@ -39,17 +39,23 @@ const Banner: FC<BannerProps> = ({}) => {
                 className="w-13 h-13 rounded-full border-4 border-white object-cover overflow-hidden"
               >
                 <Image
-                  src={`/img/avatar-${i}.jpeg`}
+                  src={`/assets/avatar-${i}.jpeg`}
                   alt=""
-                  width={52} // Set your desired width
-                  height={52} // Set your desired height
+                  width={52}
+                  height={52}
                 />
               </div>
             ))}
           </div>
           <div className="pt-3 font-bold">Happy customers</div>
           <div className="flex items-center text-gray-600 leading-relaxed">
-            <StarIcon className="w-5 h-5 text-yellow-500" />
+            <Image
+              alt=""
+              width={5}
+              height={5}
+              src={Star}
+              className="w-5 h-5 text-yellow-500"
+            />
             <span className="pl-1">4.9 (+2.5k Ratings)</span>
           </div>
         </div>

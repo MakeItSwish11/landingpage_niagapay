@@ -79,7 +79,7 @@ const Pricing: FC<PricingProps> = ({}) => {
 
   return (
     <section
-      id="#pricing"
+      id="Pricing"
       className="py-12 px-6 mx-auto max-w-screen-xl sm:px-8 md:px-12 lg:px-16 xl:px-24"
     >
       <div className="flex items-center justify-center">
