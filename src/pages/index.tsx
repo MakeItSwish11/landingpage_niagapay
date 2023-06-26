@@ -2,17 +2,29 @@ import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import Aos from 'aos';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Banner from '../../components/Banner';
 import Devs from '../../components/Devs';
 import Pricing from '../../components/Pricing';
+import Contact from '../../components/Contact';
 
 const Header = dynamic(() => import('../../components/Header'));
 const Built = dynamic(() => import('../../components/Built'));
 const Suits = dynamic(() => import('../../components/Suits'));
-const Footer = dynamic(() => import('../../components/Footer'));
 
 export default function Home() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState('Home');
+  const menus = ['Home', 'Pricing', 'Contact'];
+
+  const handleSetActiveMenu = (menu: string) => {
+    setActiveMenu(menu);
+  };
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   useEffect(() => {
     Aos.init({
       easing: 'ease-out-cubic',
@@ -23,7 +35,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen font-sans text-gray-900 bg-gradient-to-br from-transparent to-green-100">
+    <div
+      className={`w-full min-h-screen font-sans text-gray-900 bg-gradient-to-br from-transparent to-green-100 ${
+        sidebarOpen ? 'overflow-scroll h-screen' : ''
+      }`}
+    >
       <Head>
         <title>NiagaPay - Solution For Payments</title>
         <meta
@@ -34,12 +50,19 @@ export default function Home() {
         <link rel="icon" href="https://niagapay.click/images/favicon.ico" />
       </Head>
 
-      <Header />
+      <Header
+        sidebarOpen={sidebarOpen}
+        toggleSidebar={toggleSidebar}
+        menus={menus}
+        activeMenu={activeMenu}
+        setActiveMenu={handleSetActiveMenu}
+      />
       <Banner />
       <Devs />
       <Built />
       <Pricing />
       <Suits />
+      <Contact />
       {/* <Footer /> */}
     </div>
   );

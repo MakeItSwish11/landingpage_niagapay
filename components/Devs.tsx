@@ -1,4 +1,8 @@
+import Image from 'next/image';
 import { FC } from 'react';
+import API from '../public/assets/api.svg';
+import Secure from '../public/assets/cloud.svg';
+import Sandbox from '../public/assets/database.svg';
 
 interface DevsProps {}
 
@@ -61,7 +65,7 @@ const Devs: FC<DevsProps> = ({}) => {
                   {'\n'}
                   &nbsp;&nbsp;{'"exp": "2023-06-09T08:01:55.272Z",'}
                   {'\n'}
-                  &nbsp;&nbsp;{'"status": "settled",'}
+                  &nbsp;&nbsp;{'"status": "paid",'}
                   {'\n'}
                   {'}'}
                 </code>
@@ -73,7 +77,7 @@ const Devs: FC<DevsProps> = ({}) => {
 
       <div className="flex flex-col items-center pt-12 sm:items-start sm:flex-row md:pt-18">
         <div className="flex flex-col items-center w-full max-w-sm pt-8 text-center sm:text-left sm:block sm:pt-0 md:w-1/3">
-          <img src="assets/api.svg" alt="" />
+          <Image width={100} height={100} src={API} alt="" />
           <h3 className="pt-3 text-xl font-bold text-black sm:pt-6 font-rubik">
             Modern, clean APIs
           </h3>
@@ -84,7 +88,7 @@ const Devs: FC<DevsProps> = ({}) => {
           </p>
         </div>
         <div className="flex flex-col items-center w-full max-w-sm pt-8 text-center sm:text-left sm:block sm:pt-0 md:w-1/3">
-          <img src="assets/cloud.svg" alt="" />
+          <Image width={100} height={100} src={Secure} alt="" />
           <h3 className="pt-3 text-xl font-bold text-black sm:pt-6 font-rubik">
             Secure Payment Gateway
           </h3>
@@ -95,7 +99,7 @@ const Devs: FC<DevsProps> = ({}) => {
           </p>
         </div>
         <div className="flex flex-col items-center w-full max-w-sm pt-8 text-center sm:text-left sm:block sm:pt-0 md:w-1/3">
-          <img src="assets/database.svg" alt="" />
+          <Image width={100} height={100} src={Sandbox} alt="" />
           <h3 className="pt-3 text-xl font-bold text-black sm:pt-6 font-rubik">
             Sandbox environment
           </h3>

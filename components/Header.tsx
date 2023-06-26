@@ -2,25 +2,28 @@ import { Menu } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 
-function Header() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-  const menus = ['Home', 'Pricing', 'Contact']; // Array containing menu items
-  const activeMenu = 'Home';
+interface HeaderProps {
+  sidebarOpen: boolean;
+  toggleSidebar: () => void;
+  menus: string[];
+  activeMenu: string;
+  setActiveMenu: (menu: string) => void;
+}
 
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
-
+function Header({
+  sidebarOpen,
+  toggleSidebar,
+  menus,
+  activeMenu,
+  setActiveMenu,
+}: HeaderProps) {
   return (
-    <nav
-      data-aos="fade-left"
-      className="flex justify-between items-center py-8 px-6 mx-auto max-w-screen-xl md:px-12 lg:px-16 xl:px-24"
-    >
-      <a href="/" className="text-3xl md:text-4xl font-bold tracking-wide">
+    <nav className="flex justify-between items-center py-8 px-6 mx-auto max-w-screen-xl md:px-12 lg:px-16 xl:px-24">
+      <Link className="text-3xl md:text-4xl font-bold tracking-wide" href="/">
         Niaga<span className="text-green">pay</span>
-      </a>
+      </Link>
       <div
-        className={`inset-0 transition-all bg-white/70 backdrop-blur-xl z-20 md:static md:bg-transparent md:flex items-center justify-center space-y-8 md:space-y-0 md:space-x-8 flex-col md:flex-row lg:space-x-14 ${
+        className={`inset-0 transition-all h-full bg-white/70 backdrop-blur-xl z-20 md:static md:bg-transparent md:flex items-center justify-center space-y-8 md:space-y-0 md:space-x-8 flex-col md:flex-row lg:space-x-14  ${
           sidebarOpen ? 'fixed flex' : 'hidden'
         }`}
       >
@@ -32,14 +35,16 @@ function Header() {
                 activeMenu === menu ? 'text-green' : ''
               }`}
             >
-              <a href={`#${menu}`}>{menu}</a>
+              <a href={`#${menu}`} onClick={() => setActiveMenu(menu)}>
+                {menu}
+              </a>
               <div className="h-0.5 bg-green scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out" />
             </li>
           ))}
         </ul>
         <Link
           href="https://portal.niagapay.click/login"
-          className="flex justify-center items-center h-13 px-7 font-medium text-white bg-green rounded-xl hover:shadow-primary transition-shadow duration-300 whitespace-nowrap"
+          className="flex justify-center items-center h-13 px-7 font-medium text-white bg-green rounded-xl hover:shadow-2xl transition-shadow duration-300 whitespace-nowrap"
         >
           Sign In
         </Link>
