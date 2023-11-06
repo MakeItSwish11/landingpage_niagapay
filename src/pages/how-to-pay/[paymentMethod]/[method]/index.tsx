@@ -333,105 +333,129 @@ const MethodsPage: FC<MethodsProps> = ({}) => {
                 <h1 className="text-xl font-bold">Payment method via ATM:</h1>
                 <ol className="list-decimal px-8 ">
                   <li>
-                    Enter your <strong>ATM</strong> Card and{' '}
-                    <strong>PIN</strong>
+                    Insert your <strong>ATM</strong> card and enter your{' '}
+                    <strong>PIN</strong>.
                   </li>
                   <li>
-                    Select <strong>Buy/Pay</strong>
+                    Select the <strong>"Bayar / Beli"</strong> menu.
                   </li>
                   <li>
-                    Select <strong>More</strong>
+                    Choose <strong>"Lainnya"</strong> twice.
                   </li>
                   <li>
-                    Select <strong>Multi Payment</strong>
+                    Select <strong>"Multi Payment"</strong>
                   </li>
                   <li>
-                    Input the <strong>Virtual Account Number</strong>, for
-                    example <strong>70017XXXXXXXXXXXX</strong>
+                    Enter <strong>(77017)</strong> as the{' '}
+                    <strong>Kode Perusahaan / Institusi</strong>
                   </li>
                   <li>
-                    Select <strong>TRUE</strong>
+                    Input the <strong>Virtual Account Number</strong> (e.g.,
+                    146XXXXXXX) as the <strong>Nomor VA</strong>
+                  </li>
+                  <li>Select "Benar."</li>
+                  <li>
+                    Input the transfer <strong>amount</strong> as per your
+                    bills.{' '}
+                    <em className="text-red-500">
+                      Different amounts cannot be processed
+                    </em>
                   </li>
                   <li>
-                    Select <strong>YES</strong>
+                    Select <strong>"Benar"</strong>
                   </li>
                   <li>
-                    Take your <strong>proof of payment</strong>
+                    The screen displays the{' '}
+                    <strong>Kode Bayar and Data Pembayaran</strong>
+                    Press <strong>"1"</strong> if the data is correct.
                   </li>
-                  <li>Finish</li>
+                  <li>
+                    Click <strong>"Yes"</strong> to initiate the payment.
+                  </li>
+                  <li>Payment is complete.</li>
                 </ol>
               </div>
               <div className="p-4 bg-white mx-2 border rounded-md">
                 <h1 className="text-xl font-bold">
                   Payment method via Mobile Banking:
                 </h1>
-                <ol className="list-decimal px-8 ">
+                <ol className="list-decimal px-8">
                   <li>
-                    Login to your <strong>{method} Mobile Banking</strong>
+                    Log in to <strong>New Livin by Mandiri</strong>
                   </li>
                   <li>
-                    Select <strong>Pay</strong>
+                    Select the <strong>"Bayar"</strong> menu.
                   </li>
                   <li>
-                    Input <strong>i-Pay</strong> as a{' '}
-                    <strong>Service Provider</strong>
+                    Search for <strong>(77017)</strong> or search for{' '}
+                    <strong>(I-Pay)</strong> as the{' '}
+                    <strong>Penyedia Jasa (Service Provider)</strong>
+                  </li>
+                  <li>Enter the Virtual Account Number (e.g., 146XXXXXXX).</li>
+                  <li>Click "Lanjutkan" (Continue).</li>
+                  <li>
+                    Enter the transfer amount as per your bills.{' '}
+                    <em className="text-red-500">
+                      Different amounts cannot be processed
+                    </em>
                   </li>
                   <li>
-                    Input the <strong>Virtual Account Number</strong>, for
-                    example <strong>12345678xxxx</strong>
+                    The screen displays the Kode Bayar and Data Pembayaran
+                    (Payment Code and Payment Data).
                   </li>
                   <li>
-                    Select <strong>Continue</strong>
+                    If the data is correct, click{' '}
+                    <strong>"Lanjutkan" (Continue)</strong>
                   </li>
                   <li>
-                    Input your {method} Mobile Banking{' '}
-                    <strong>OTP and PIN</strong>
+                    Enter your <strong>PIN for New Livin</strong> and click
+                    <strong>"OK"</strong>
                   </li>
-                  <li>
-                    Select <strong>OK</strong>
-                  </li>
-                  <li>
-                    <strong>Proof Of Payment</strong> will Displayed
-                  </li>
-                  <li>Finish</li>
+                  <li>Payment is complete.</li>
                 </ol>
               </div>
               <div className="p-4 bg-white mx-2 border rounded-md">
                 <h1 className="text-md font-bold">
                   Payment method via Internet Banking:
                 </h1>
-                <ol className="list-decimal px-8 ">
+                <ol className="list-decimal px-8">
+                  <li>Log in to your Internet Banking account.</li>
                   <li>
-                    Login to <strong>{method} Internet Banking</strong>
+                    Select the <strong>"Bayar" (Pay)</strong> option
                   </li>
                   <li>
-                    Select a <strong>Pay</strong>
+                    Choose <strong>"Multi Payment"</strong>
                   </li>
                   <li>
-                    Select a <strong>Multi Payment</strong>
+                    Search for <strong>(I-Pay)</strong> as the Penyedia Jasa
+                    (Service Provider).
                   </li>
                   <li>
-                    Input <strong>i-Pay</strong> as a{' '}
-                    <strong>Service Provider</strong>
+                    Enter the <strong>Virtual Account Number</strong> (e.g.,
+                    146XXXXXXX).
                   </li>
                   <li>
-                    Input the <strong>Virtual Account Number</strong>, for
-                    example <strong>12345678xxxx</strong>
+                    Click <strong>"Lanjutkan" (Continue)</strong>
                   </li>
                   <li>
-                    Select <strong>Continue</strong>
+                    Enter the transfer <strong>amount</strong> as per your
+                    bills.{' '}
+                    <em className="text-red-500">
+                      Different amounts cannot be processed
+                    </em>
                   </li>
                   <li>
-                    Input your {method} Mobile Banking{' '}
-                    <strong>OTP and PIN</strong>
+                    Check that the currency is in <strong>IDR</strong>
                   </li>
                   <li>
-                    Select <strong>OK</strong>
+                    Click <strong>"Lanjutkan" (Continue)</strong>
                   </li>
                   <li>
-                    <strong>Proof Of Payment</strong> will Displayed
+                    Enter the <strong>Code from your Token Mandiri</strong>,
+                    then click <strong>"Kirim" (Send)</strong>
                   </li>
-                  <li>Finish</li>
+                  <li>The payment receipt will be displayed.</li>
+                  <li>Payment is complete.</li>
                 </ol>
               </div>
               <div className="p-4 bg-white mx-2 border rounded-md">
@@ -439,25 +463,31 @@ const MethodsPage: FC<MethodsProps> = ({}) => {
                   Payment Methods through non-Bank {method} Channel:
                 </h1>
                 <ol className="list-decimal px-8">
-                  <li>Input your ATM card and PIN</li>
                   <li>
-                    Select <strong>Pay/Buy</strong>
+                    Insert your <strong>ATM</strong> card and enter your{' '}
+                    <strong>PIN</strong>
                   </li>
                   <li>
-                    Choose <strong>Others</strong>
+                    <strong>
+                      Select "Transfer Antar Bank Online" from the menu
+                    </strong>
+                  </li>
+                  <li>Choose "Bank Mandiri" as the destination bank.</li>
+                  <li>
+                    Enter the code <strong>(88017)</strong> followed by the
+                    <strong>Virtual Account Number</strong> (e.g.,
+                    <strong>88017xxxxxxxxxx</strong>).
                   </li>
                   <li>
-                    Select <strong>Bank Transfer</strong>
+                    Input the transfer <strong>amount</strong> as per your
+                    bills.{' '}
+                    <em className="text-red-500">
+                      Different amounts cannot be processed
+                    </em>
                   </li>
                   <li>
-                    Choose <strong>Bank Mandiri (008)</strong>
+                    Follow the subsequent steps until the payment is completed.
                   </li>
-                  <li>
-                    Enter <strong>88017</strong>, followed by the virtual
-                    account number, for example <strong>881714501000009</strong>
-                  </li>
-                  <li>Enter the payment amount</li>
-                  <li>Proceed with the payment</li>
                 </ol>
               </div>
             </>
@@ -631,7 +661,7 @@ const MethodsPage: FC<MethodsProps> = ({}) => {
                   </li>
                   <li>
                     Input the <strong>Virtual Account Number</strong>, for
-                    example <strong>70017XXXXXXXXXXXX</strong>
+                    example <strong>10339XXXXXXXXXXXX</strong>
                   </li>
                   <li>
                     Select <strong>YES</strong>
@@ -661,7 +691,7 @@ const MethodsPage: FC<MethodsProps> = ({}) => {
                   </li>
                   <li>
                     Input the <strong>Virtual Account Number</strong>, for
-                    example <strong>12345678xxxx</strong>
+                    example <strong>10339xxxx</strong>
                   </li>
                   <li>
                     Enter the <strong>nominal according to the bill</strong>,
@@ -698,7 +728,7 @@ const MethodsPage: FC<MethodsProps> = ({}) => {
                   </li>
                   <li>
                     Enter the <strong>Virtual Account Number</strong>, for
-                    example <strong>887XXXXX</strong>
+                    example <strong>10339XXXXX</strong>
                   </li>
                   <li>
                     Click <strong>Submit</strong>
@@ -837,33 +867,33 @@ const MethodsPage: FC<MethodsProps> = ({}) => {
                 <h1 className="text-xl font-bold">Payment method via ATM:</h1>
                 <ol className="list-decimal px-8">
                   <li>
-                    Input your <strong>ATM Card</strong> and{' '}
+                    Insert your <strong>ATM</strong> card and enter your{' '}
                     <strong>PIN</strong>
                   </li>
                   <li>
-                    Select <strong>Payment</strong> menu
+                    Select the <strong>"Pembayaran" (Payment)</strong> menu.
                   </li>
                   <li>
-                    Select <strong>Continue</strong> menu
+                    Choose the <strong>"Lanjut" (Continue)</strong> option.
                   </li>
                   <li>
-                    Select <strong>Virtual Account</strong> menu
+                    Select the <strong>"Virtual Account"</strong> menu.
                   </li>
                   <li>
-                    Enter the <strong>Virtual Account Number</strong>, for
-                    example <strong>8625XXXXXXXXXX</strong>
+                    Enter the <strong>Virtual Account Number</strong> (e.g.,
+                    <strong>5919XXXXXXXXXXXX</strong>).
                   </li>
                   <li>
-                    Select <strong>Process</strong>
-                  </li>
-                  <li>Virtual Account data will be displayed</li>
-                  <li>
-                    Select <strong>Process</strong>
+                    Select <strong>"Proses" (Process)</strong>
                   </li>
                   <li>
-                    Retrieve your <strong>Proof of Payment</strong>
+                    The <strong>Virtual Account Data</strong> will be displayed.
                   </li>
-                  <li>Finished</li>
+                  <li>
+                    Select <strong>"Proses" (Process)</strong> again.
+                  </li>
+                  <li>Retrieve your payment receipt.</li>
+                  <li>Payment is complete.</li>
                 </ol>
               </div>
               <div className="p-4 bg-white mx-2 border rounded-md">
@@ -872,36 +902,33 @@ const MethodsPage: FC<MethodsProps> = ({}) => {
                 </h1>
                 <ol className="list-decimal px-8">
                   <li>
-                    Login to your <strong>Go Mobile</strong>
+                    Log in to your <strong>OCTO Mobile</strong> account
                   </li>
                   <li>
-                    Select <strong>Transfer</strong> menu
+                    Select the <strong>"Transfer"</strong> menu.
                   </li>
                   <li>
-                    Select <strong>Transfer to Another CIMB Niaga</strong> menu
+                    Choose the <strong>"Other CIMB Niaga"</strong> option
+                  </li>
+                  <li>Select the source account for the transaction.</li>
+                  <li>
+                    Enter the <strong>Virtual Account Number</strong> (e.g.,
+                    <strong>5919XXXXXXXXXXXX</strong>).
                   </li>
                   <li>
-                    Select the <strong>source of funds</strong> to be used
+                    Click <strong>"Submit"</strong>
                   </li>
                   <li>
-                    Enter the <strong>Virtual Account Number</strong>, for
-                    example <strong>8625XXXXXXX</strong>
+                    The <strong>Virtual Account Data</strong> will be displayed.
                   </li>
                   <li>
-                    Enter the <strong>amount</strong>, for example{' '}
-                    <strong>100000</strong>
+                    Enter your mobile <strong>PIN</strong>
                   </li>
                   <li>
-                    Click <strong>Next</strong>
+                    Click <strong>"Confirm"</strong>
                   </li>
-                  <li>Virtual Account data will be displayed</li>
-                  <li>
-                    Enter your <strong>Mobile PIN</strong>
-                  </li>
-                  <li>
-                    The <strong>Proof of Payment</strong> will be sent via SMS
-                  </li>
-                  <li>Finished</li>
+                  <li>The payment receipt will be displayed.</li>
+                  <li>Payment is complete.</li>
                 </ol>
               </div>
               <div className="p-4 bg-white mx-2 border rounded-md">
@@ -910,41 +937,40 @@ const MethodsPage: FC<MethodsProps> = ({}) => {
                 </h1>
                 <ol className="list-decimal px-8">
                   <li>
-                    Login to your <strong>Internet Banking</strong>
+                    Log in to your <strong>Internet Banking</strong> account.
                   </li>
                   <li>
-                    Select <strong>Pay Bill</strong>
+                    Select the <strong>"Pay Bills"</strong> option.
+                  </li>
+                  <li>Choose the source account you want to use.</li>
+                  <li>
+                    Select <strong>"Virtual Account"</strong> as the payment
+                    type.
                   </li>
                   <li>
-                    Select the <strong>Source Account</strong> - Choose the
-                    account you want to use
+                    Choose <strong>"Masukkan Nomor Virtual Account"</strong> for
+                    the payment destination.
                   </li>
                   <li>
-                    Select <strong>Payment Type</strong> - Choose{' '}
-                    <strong>Virtual Account</strong>
+                    Enter the <strong>Virtual Account Number</strong> (e.g.,
+                    <strong>5919XXXXXXXXXXXX</strong>)
                   </li>
                   <li>
-                    For <strong>Payment</strong> - Enter the{' '}
-                    <strong>Virtual Account Number</strong>, for example{' '}
-                    <strong>8625XXXXX</strong>
+                    Click <strong>"Next"</strong>
                   </li>
                   <li>
-                    Fill in the <strong>Remark</strong> if necessary
+                    The <strong>Virtual Account Data</strong> will be displayed.
                   </li>
                   <li>
-                    Click <strong>Continue</strong>
-                  </li>
-                  <li>Virtual Account data will be displayed</li>
-                  <li>
-                    Enter your <strong>mPIN</strong>
+                    Input your <strong>mPIN</strong>
                   </li>
                   <li>
-                    Click <strong>Send</strong>
+                    Click <strong>"Submit"</strong>
                   </li>
                   <li>
-                    The <strong>Proof of Payment</strong> will be displayed
+                    The <strong>Payment receipt</strong> will be displayed.
                   </li>
-                  <li>Finished</li>
+                  <li>Payment is complete.</li>
                 </ol>
               </div>
             </>
@@ -956,25 +982,19 @@ const MethodsPage: FC<MethodsProps> = ({}) => {
                 </h1>
                 <ol className="list-decimal px-8">
                   <li>
-                    Input your <strong>ATM Card</strong> and{' '}
-                    <strong>PIN</strong>
+                    Input your <strong>ATM PIN</strong>
                   </li>
                   <li>
-                    Select <strong>Payment Menu</strong>
-                  </li>
-                  <li>
-                    Choose <strong>Virtual Account</strong>
+                    Select the <strong>"Pembayaran" (Payment)</strong> menu,
+                    then choose <strong>"Virtual Account"</strong>
                   </li>
                   <li>
                     Enter the <strong>Virtual Account Number</strong>
                   </li>
                   <li>
-                    Enter the <strong>Amount</strong>
-                  </li>
-                  <li>
-                    On the payment confirmation screen, verify the transaction
-                    details and select <strong>YES</strong> to proceed with the
-                    transaction
+                    On the payment confirmation screen, ensure that the
+                    transaction details are correct. Select{' '}
+                    <strong>"Ya" (Yes)</strong> to process the transaction.
                   </li>
                 </ol>
               </div>
@@ -982,21 +1002,16 @@ const MethodsPage: FC<MethodsProps> = ({}) => {
                 <h1 className="text-xl font-bold">D-Mobile Application:</h1>
                 <ol className="list-decimal px-8">
                   <li>
-                    Login to your <strong>D-Mobile</strong> application
+                    Log in to the <strong>D-Mobile application</strong>
+                  </li>
+                  <li>Select the "Virtual Account" menu.</li>
+                  <li>
+                    Input the <strong>16-digit Virtual Account Number</strong>
                   </li>
                   <li>
-                    Select <strong>Virtual Account</strong> menu
-                  </li>
-                  <li>
-                    Enter the <strong>16-digit Virtual Account Number</strong>
-                  </li>
-                  <li>
-                    Enter the <strong>Amount</strong>
-                  </li>
-                  <li>
-                    On the payment confirmation screen, verify the transaction
-                    details and select <strong>Yes</strong> to proceed with the
-                    transaction
+                    On the payment confirmation screen, ensure that the
+                    transaction details are correct. Select{' '}
+                    <strong>"Ya" (Yes)</strong> to process the transaction.
                   </li>
                 </ol>
               </div>
@@ -1006,77 +1021,29 @@ const MethodsPage: FC<MethodsProps> = ({}) => {
                 </h1>
                 <ol className="list-decimal px-8">
                   <li>
-                    Go to the <strong>Transfer</strong> menu
+                    Enter the <strong>transfer</strong> menu.
                   </li>
                   <li>
                     Select the destination account as{' '}
                     <strong>Bank Danamon</strong>
                   </li>
                   <li>
-                    Enter the <strong>Bank Danamon Code (011)</strong> +{' '}
-                    <strong>16-digit Virtual Account Number</strong>
+                    Input the Bank Danamon Code{' '}
+                    <strong>
+                      (011) followed by the 16-digit Virtual Account Number
+                    </strong>
                   </li>
                   <li>
-                    Enter the <strong>payment amount</strong>
+                    Input the transfer amount as per your bills.{' '}
+                    <em className="text-red-500">
+                      Different amounts cannot be processed
+                    </em>
                   </li>
                   <li>
-                    On the payment confirmation screen, please ensure that the
-                    recipient`s name and transaction amount are correct
+                    On the payment confirmation screen, ensure that the
+                    destination name and transaction amount are correct.
                   </li>
-                  <li>Confirm the payment</li>
-                </ol>
-              </div>
-              <div className="p-4 bg-white mx-2 border rounded-md">
-                <h1 className="text-xl font-bold">
-                  ATMs of other banks use Bank Danamon cards or other banks
-                </h1>
-                <ol className="list-decimal px-8">
-                  <li>
-                    Go to the <strong>Transfer</strong> menu
-                  </li>
-                  <li>
-                    Select <strong>Other Bank Account</strong> as the
-                    destination
-                  </li>
-                  <li>
-                    Enter the <strong>Bank Danamon Code (011)</strong> +{' '}
-                    <strong>16-digit Virtual Account Number</strong>
-                  </li>
-                  <li>
-                    Enter the <strong>payment amount</strong>
-                  </li>
-                  <li>
-                    On the payment confirmation screen, please ensure that the
-                    recipient`s name and transaction amount are correct
-                  </li>
-                  <li>Confirm the payment</li>
-                </ol>
-              </div>
-              <div className="p-4 bg-white mx-2 border rounded-md">
-                <h1 className="text-xl font-bold">
-                  Internet Banking Other Banks, Online Transfers (ATM Bersama /
-                  ALTO / Prima)
-                </h1>
-                <ol className="list-decimal px-8">
-                  <li>
-                    Go to the <strong>Transfer</strong> menu
-                  </li>
-                  <li>
-                    Select the destination account as{' '}
-                    <strong>Bank Danamon</strong>
-                  </li>
-                  <li>
-                    Enter the <strong>Bank Danamon Code (011)</strong> +{' '}
-                    <strong>16-digit Virtual Account Number</strong>
-                  </li>
-                  <li>
-                    Enter the <strong>payment amount</strong>
-                  </li>
-                  <li>
-                    On the payment confirmation screen, please ensure that the
-                    recipient`s name and transaction amount are correct
-                  </li>
-                  <li>Confirm the payment</li>
+                  <li>Confirm the payment.</li>
                 </ol>
               </div>
             </>
@@ -1086,31 +1053,43 @@ const MethodsPage: FC<MethodsProps> = ({}) => {
                 <h1 className="text-xl font-bold">Payment method via ATM:</h1>
                 <ol className="list-decimal px-8">
                   <li>
-                    Select <strong>Payment / Pembayaran / Pembelian</strong>{' '}
-                    menu
+                    Select the <strong>"Menu Utama" (Main Menu)</strong>
                   </li>
                   <li>
-                    Choose <strong>Institution / Akademik / Wakaf</strong>
+                    Choose{' '}
+                    <strong>
+                      "Pembayaran / Pembelian" (Payment / Purchase)
+                    </strong>
                   </li>
                   <li>
-                    Enter the institution code: <strong>1062</strong> followed
-                    by your payment VA number. Format:{' '}
-                    <strong>1062xxxxxxxxxxxx</strong> (1062 = institution code,
-                    xxxxxxxxxxxx = payment / virtual account number) Example:
-                    1062123456789123
+                    Select the <strong>"Menu Akademik" (Academic Menu)</strong>
                   </li>
                   <li>
-                    Press <strong>OK / Next</strong> button
+                    Enter the{' '}
+                    <strong>
+                      Institution Code: (1062) followed by the Virtual Account
+                      Number
+                    </strong>
                   </li>
                   <li>
-                    Your transaction data will be displayed, please double-check
-                    the recipient`s name and payment amount to match your bill
+                    Format: <strong>1062xxxxxxxxxx</strong> (1062 = Institution
+                    Code, xxxxxxxxxx = Virtual Account Number) (example:
+                    1062xxxxxxxxxx).
                   </li>
                   <li>
-                    If the data is correct, select <strong>OK / YES</strong>
+                    Select <strong>"Benar" (Correct)</strong>
                   </li>
                   <li>
-                    The transaction receipt will be displayed if successful
+                    Display your transaction data information and verify that
+                    the destination name and payment amount match your bill.
+                  </li>
+                  <li>
+                    If the data is correct, select{' '}
+                    <strong>"Benar" (Correct)</strong>
+                  </li>
+                  <li>
+                    A proof of transaction will be provided if the transaction
+                    is successful.
                   </li>
                 </ol>
               </div>
@@ -1120,30 +1099,32 @@ const MethodsPage: FC<MethodsProps> = ({}) => {
                 </h1>
                 <ol className="list-decimal px-8">
                   <li>
-                    Select <strong>Payment / Pembayaran</strong> menu
+                    Select the <strong>"Menu Bayar" (Payment Menu)</strong>
                   </li>
                   <li>
-                    Choose <strong>Institution / Akademik / Wakaf</strong>
+                    Choose <strong>"Akademik"</strong>
                   </li>
                   <li>
-                    Enter the institution code: <strong>1062</strong>
+                    Enter the <strong>Institution Code: (1062)</strong>
                   </li>
                   <li>
-                    Enter your payment VA number without the institution code,
-                    then click "Agree / Setuju"
+                    Enter your <strong>Virtual Account Number</strong>, then
+                    click <strong>"Selanjutnya" (Next)</strong>
                   </li>
                   <li>
-                    Press <strong>Next</strong> button, then your transaction
-                    data will be displayed. Please double-check the recipient's
-                    name and payment amount to match your bill, then click{' '}
-                    <strong>Next</strong>
-                  </li>
-                  <li>Enter your PIN</li>
-                  <li>
-                    Press <strong>Next</strong> button to Submit
+                    Enter your <strong>PIN</strong>, then click{' '}
+                    <strong>"Selanjutnya" (Next)</strong>
                   </li>
                   <li>
-                    The transaction receipt will be displayed if successful
+                    Display your transaction data information and verify that
+                    the destination name and payment amount match your bill.
+                  </li>
+                  <li>
+                    Click <strong>"Selanjutnya" (Next)</strong>
+                  </li>
+                  <li>
+                    A proof of transaction will be provided if the transaction
+                    is successful.
                   </li>
                 </ol>
               </div>
@@ -1153,30 +1134,33 @@ const MethodsPage: FC<MethodsProps> = ({}) => {
                 </h1>
                 <ol className="list-decimal px-8">
                   <li>
-                    Input your <strong>ATM Card</strong> and{' '}
+                    Input your <strong>ATM</strong> card and enter your{' '}
                     <strong>PIN</strong>
                   </li>
                   <li>
-                    Select <strong>Pay / Buy</strong>
+                    Choose <strong>"Bayar / Beli" (Pay / Buy)</strong>
                   </li>
                   <li>
-                    Choose <strong>Others / Lainnya</strong>
+                    Choose <strong>"Lainnya" (Others)</strong>
                   </li>
-                  <li>
-                    Select <strong>Bank Transfer</strong>
-                  </li>
+                  <li>Choose "Bank Transfer."</li>
                   <li>
                     Choose <strong>BSI Bank (451)</strong>
                   </li>
                   <li>
-                    Enter <strong>9001062</strong>, followed by the virtual
-                    account number, for example{' '}
-                    <strong>9001062010000000014</strong>
+                    Enter the code{' '}
+                    <strong>
+                      (9001062) followed by the Virtual Account Number
+                    </strong>{' '}
+                    (e.g., <strong>900106xxxxxxxxxx</strong>)
                   </li>
                   <li>
-                    Enter the <strong>Payment Amount</strong>
+                    Input the transfer amount as per your bills.{' '}
+                    <em className="text-red-500">
+                      Different amounts cannot be processed
+                    </em>
                   </li>
-                  <li>Proceed with the payment</li>
+                  <li>Make the payment.</li>
                 </ol>
               </div>
             </>

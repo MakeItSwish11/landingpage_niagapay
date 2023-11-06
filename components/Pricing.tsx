@@ -7,14 +7,10 @@ interface PricingProps {}
 
 export interface Method {
   _id: string;
-  name: string;
-  type: string;
-  code: string;
-  path: string;
-  img: string;
-  isActive: boolean;
-  min: number;
-  max: number;
+  methodName: string;
+  methodType: string;
+  methodImg: string;
+  lp: string;
 }
 
 interface MethodsByType {
@@ -47,26 +43,24 @@ const Pricing: FC<PricingProps> = ({}) => {
               ? 'E-Wallet'
               : 'QRIS'}
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center">
+          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center">
             {methods.map((method) => (
               <div
-                className="flex flex-row justify-between bg-white shadow-md rounded-md mt-2  p-4 items-center"
+                className="flex flex-row justify-between bg-white shadow-md rounded-md mt-2 p-4 items-center"
                 key={method._id}
               >
                 <Image
-                  src={`${BASE_URL + method.img}`}
-                  alt={method.name}
+                  src={`${BASE_URL + method.methodImg}`}
+                  alt={method.methodName}
                   width={80}
                   height={80}
                 />
-                <div className="flex flex-col">
+                <div className="grid grid-cols-1 w-[25%] md:w-[30%] ">
                   <h3 className="text-xl font-bold text-black  font-rubik">
                     Fee
                   </h3>
                   <p className="pt-4 pr-8 text-base font-bold  text-green md:pr-16">
-                    {method.fee.type === 'fixed'
-                      ? formatter.format(method.fee.fixed)
-                      : `${method.fee.percentage}%`}
+                    {method.lp}
                   </p>
                 </div>
               </div>
@@ -80,7 +74,7 @@ const Pricing: FC<PricingProps> = ({}) => {
   return (
     <section
       id="Pricing"
-      className="py-12 px-6 mx-auto max-w-screen-xl sm:px-8 md:px-12 lg:px-16 xl:px-24"
+      className=" py-12 px-6 mx-auto max-w-screen-xl sm:px-8 md:px-12 lg:px-16 xl:px-24"
     >
       <div className="flex items-center justify-center">
         <h2 className="max-w-lg text-4xl font-bold tracking-tight text-center text-black sm:text-5xl md:text-6xl leading-tighter font-rubik">

@@ -9,11 +9,11 @@ import { BASE_API_V1 } from '../constant/api';
 
 export interface Method {
   _id: string;
-  name: string;
-  type: string;
+  methodName: string;
+  methodType: string;
   code: string;
   path: string;
-  img: string;
+  methodImg: string;
   isActive: boolean;
   fee: {
     fixed: number;
@@ -22,6 +22,7 @@ export interface Method {
   };
   min: number;
   max: number;
+  lp: string;
 }
 
 interface MethodsByType {
@@ -61,7 +62,7 @@ const useMethods = (isAdmin: boolean = false) => {
             },
           });
         } else {
-          methodResponse = await fetch(`${BASE_API_V1}p/product/method`, {
+          methodResponse = await fetch(`${BASE_API_V1}p/lp/method`, {
             headers: {
               'x-browser-id': browserId,
             },
@@ -87,10 +88,10 @@ const useMethods = (isAdmin: boolean = false) => {
           setMethods(methodsArray);
           const groupedMethods = methodsArray.reduce<MethodsByType>(
             (acc, item) => {
-              if (!acc[item.type]) {
-                acc[item.type] = [];
+              if (!acc[item.methodType]) {
+                acc[item.methodType] = [];
               }
-              acc[item.type].push(item);
+              acc[item.methodType].push(item);
               return acc;
             },
             {}

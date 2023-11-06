@@ -104,7 +104,7 @@ const methodRetail = [
     img: 'https://niagapay.click/images/method/alfamart-6419973dbedd18275e82226a.webp',
     width: 100,
     height: 100,
-    link: 'Alfamaret',
+    link: 'ALFAMART',
   },
 ];
 

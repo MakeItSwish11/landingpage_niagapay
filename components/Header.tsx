@@ -1,6 +1,5 @@
 import { Menu } from 'lucide-react';
 import Link from 'next/link';
-import { useState } from 'react';
 
 interface HeaderProps {
   sidebarOpen: boolean;
@@ -42,12 +41,6 @@ function Header({
             </li>
           ))}
         </ul>
-        <Link
-          href="https://portal.niagapay.click/login"
-          className="flex justify-center items-center h-13 px-7 font-medium text-white bg-green rounded-xl hover:shadow-2xl transition-shadow duration-300 whitespace-nowrap"
-        >
-          Sign In
-        </Link>
       </div>
       <button onClick={toggleSidebar} className="block md:hidden relative z-30">
         <Menu className="w-8 h-8 fill-current text-gray-900" />

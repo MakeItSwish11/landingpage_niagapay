@@ -6,7 +6,8 @@ import { useEffect, useState } from 'react';
 import Banner from '../../components/Banner';
 import Devs from '../../components/Devs';
 import Pricing from '../../components/Pricing';
-import Contact from '../../components/Contact';
+import Footer from '../../components/Footer';
+import { Phone } from 'lucide-react';
 
 const Header = dynamic(() => import('../../components/Header'));
 const Built = dynamic(() => import('../../components/Built'));
@@ -15,7 +16,7 @@ const Suits = dynamic(() => import('../../components/Suits'));
 export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState('Home');
-  const menus = ['Home', 'Pricing', 'Contact'];
+  const menus = ['Home', 'Pricing', 'FAQ'];
 
   const handleSetActiveMenu = (menu: string) => {
     setActiveMenu(menu);
@@ -62,8 +63,8 @@ export default function Home() {
       <Built />
       <Pricing />
       <Suits />
-      <Contact />
-      {/* <Footer /> */}
+      <hr />
+      <Footer />
     </div>
   );
 }
